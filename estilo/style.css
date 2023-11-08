@@ -1,0 +1,206 @@
+@charset "UTF-8"; /*Essencial ao iniciar qualquer style.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pixelify+Sans&display=swap');
+
+  @font-face {
+  font-family:'Android';
+  src: url('../fontes/idroid.otf') format('opentype');
+  font-weight: normal;
+ }
+
+:root {   /*Conf. Globais*/
+  --cor0: #c5ebd6;
+  --cor1: #83e1ad;
+  --cor2: #3ddc84;
+  --cor3: #2fa866;
+  --cor4: #1a5c37;
+  --cor5: #063d1e;
+
+  --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --font-destaque: 'Bebas Neue', cursive;
+  --font-android: 'Android', cursive;
+  
+}
+
+* { /*Conf. Globais*/
+  margin: 0px;
+  padding: 0px;
+}
+
+body { /*Conf. o corpo total da página*/
+  background-color: var(--cor0);
+  font-family: var(--font-padrao);
+}
+
+a.externo::after { /*Inserindo um emoji de corrente ao lado direito do link*/
+  content: '\00A0\1F517';
+}
+
+header {  /*Configurando o Cabeçalho*/
+  background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /*Efeito degrade no cabeçalho*/
+  min-height: 150px; /*Tamanho minimo da tela*/
+  text-align: center;
+  padding-top: 40px;
+}
+
+header > h1 {
+  color: white;
+  font-family: var(--font-destaque);
+  font-size: 3em;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.527);
+}
+
+header > p {
+  font-family: var(--font-padrao);
+  font-size: 1.2em;
+  color: white;
+  max-width: 600px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.527);
+
+}
+
+nav {
+  background-color: var(--cor5);
+  padding: 10px;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.411);
+}
+
+nav > a {
+  color: var(--cor1);
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+nav > a:hover {
+  background-color: var(--cor3);
+  color: var(--cor5);
+}
+
+main {
+  min-width: 300px; /*O site fica responsivel nesse tamanho*/
+  max-width: 1000px; /*O site fica responsivel nesse tamanho*/
+  background-color: white;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.486);
+  border-radius: 0px 0px 10px 10px;
+}
+
+main h1 {
+  color: var(--cor5);
+  font-family: var(--font-android);
+  font-weight: normal;
+  font-size: 1.8em;
+}
+
+main h2 {
+  font-family: var(--font-android);
+  color: var(--cor4);
+  font-size: 1.3em;
+  font-weight: normal;
+  background-image: linear-gradient(to right, var(--cor1), transparent); /*Colocamos um efeito de background degrade da direita pra esquerda até sumir a cor*/
+  text-indent: 8px;
+}
+
+main p {
+  margin: 15px 0px; /*Margem superior e inferior esta em 15px já a esquerda e direita está 0px*/
+  text-align: justify;
+  text-indent: 30px; /*Recuo de parágrafos*/
+  font-size: 1em;
+  line-height: 2em;
+}
+
+main strong {
+  color: var(--cor4);
+  font-weight: bold;
+}
+
+main a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--cor5);
+  background-color: var(--cor1);
+  padding: 2px 6px;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: var(--cor4);
+}
+
+main img {
+  width: 100%;
+}
+
+main img.pequena {
+  max-width: 350px;
+  display: block; /* utilizar o display block para ajustar no meio a img*/
+  margin: auto;
+}
+
+div.video {
+  background-color: var(--cor5);
+  margin: 0px -20px 30px -20px;
+  padding: 20px;
+  padding-bottom: 56.46%;
+  position: relative;
+}
+
+div.video > iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+ 
+
+aside {
+  background-color: var(--cor1);
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.432);
+}
+
+aside > h3 {
+  background-color: var(--cor4);
+  color: white;
+  padding: 7px;
+  margin: -7px -7px 0px -7px;
+  border-radius: 7px 7px 1px 1px;
+}
+
+aside > ul {
+  list-style-type: '\2714\00A0'; /*inserir emoji do lugar da bolinha, e o codigo 00A0 é inserido um espaço sem quebra, não é compativel com todo navegador*/
+  list-style-position: inside;
+  columns: 2;
+}
+
+footer {
+  background-color: var(--cor5);
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+footer a {
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--cor1);
+}
